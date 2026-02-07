@@ -157,6 +157,31 @@ This makes it easy to inspect exactly what data the agent gathered and how it in
 **Important**: Please keep your pull requests small and focused.  This will make it easier to review and merge.
 
 
+## 🤖 Telegram Bot
+
+Dexter can run as a Telegram bot.
+
+1. Create a bot with [BotFather](https://t.me/BotFather) and get your `TELEGRAM_BOT_TOKEN`.
+2. Add the token to your `.env` file:
+```bash
+TELEGRAM_BOT_TOKEN=your-telegram-bot-token
+```
+3. Run the bot:
+```bash
+bun run start:telegram
+```
+
+## 🚢 Deploy to Coolify
+
+You can deploy Dexter to Coolify using the provided Dockerfile.
+
+1. Create a new Service in Coolify -> "From Dockerfile".
+2. Link your repository.
+3. Set the **Build Pack** to "Docker".
+4. In **Environment Variables**, add all your API keys from `.env`.
+5. Add `TELEGRAM_BOT_TOKEN` to the environment variables.
+6. Deploy!
+
 ## 📄 License
 
 This project is licensed under the MIT License.
